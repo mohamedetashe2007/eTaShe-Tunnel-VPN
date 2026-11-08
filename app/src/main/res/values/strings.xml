@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">eTaShe Tunnel VPN</string>
+
+    <string name="telegram_dialog_title">انضم لقناتنا على تيليجرام</string>
+    <string name="telegram_dialog_message">تابع آخر الكونفجات والتحديثات والدعم الفني من قناة eTaShe Tunnel VPN الرسمية.</string>
+    <string name="telegram_dialog_join">انضمام للقناة</string>
+    <string name="telegram_dialog_later">لاحقاً</string>
+
+    <string name="auto_select_server">Auto Select Server</string>
+    <string name="random_server">Random Server</string>
+    <string name="connection_time">Connection time</string>
+    <string name="connected">Connected</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="connecting">Connecting…</string>
+    <string name="usage_label">استهلكت:</string>
+    <string name="version_label">Version</string>
+</resources>

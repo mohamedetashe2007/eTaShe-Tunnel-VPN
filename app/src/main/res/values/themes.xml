@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.EtasheTunnel" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/red_primary</item>
+        <item name="colorPrimaryVariant">@color/red_dark</item>
+        <item name="colorOnPrimary">@color/text_white</item>
+        <item name="colorSecondary">@color/red_glow</item>
+        <item name="android:windowBackground">@color/bg_black</item>
+        <item name="android:statusBarColor">@color/bg_black</item>
+        <item name="android:navigationBarColor">@color/bg_black</item>
+        <item name="android:textColorPrimary">@color/text_white</item>
+    </style>
+
+    <style name="Theme.EtasheTunnel.Splash" parent="Theme.EtasheTunnel">
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+    </style>
+</resources>

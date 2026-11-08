@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_black">#0A0A0C</color>
+    <color name="surface_dark">#16161A</color>
+    <color name="surface_card">#1C1C21</color>
+    <color name="red_primary">#E11D2E</color>
+    <color name="red_dark">#9C0F1C</color>
+    <color name="red_glow">#FF2D3D</color>
+    <color name="text_white">#F5F5F5</color>
+    <color name="text_grey">#9A9A9E</color>
+    <color name="status_connected">#2ECC71</color>
+    <color name="status_disconnected">#E11D2E</color>
+</resources>
