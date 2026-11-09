@@ -44,4 +44,8 @@ dependencies {
     implementation("com.google.code.gson:gson:2.11.0")
 
     testImplementation("junit:junit:4.13.2")
+    // Real org.json implementation for JVM unit tests — Android's android.jar only
+    // ships stub bodies for org.json.* that throw at runtime unless this is on
+    // the test classpath explicitly.
+    testImplementation("org.json:json:20231013")
 }
