@@ -15,4 +15,14 @@
     <string name="connecting">Connecting…</string>
     <string name="usage_label">استهلكت:</string>
     <string name="version_label">Version</string>
+
+    <string name="import_title">استيراد كونفج</string>
+    <string name="import_hint">الصق رابط vless:// أو vmess:// أو trojan:// أو ss:// هنا</string>
+    <string name="import_parse_btn">تحليل وإضافة</string>
+    <string name="import_saved_label">الكونفجات المحفوظة</string>
+    <string name="import_empty">لا توجد كونفجات محفوظة بعد</string>
+    <string name="import_empty_input">الصق رابط الكونفج أولاً</string>
+    <string name="import_success">تم إضافة: %1$s</string>
+    <string name="import_deleted">تم الحذف</string>
+    <string name="import_generic_error">تعذر تحليل الرابط، تأكد إنه صحيح</string>
 </resources>

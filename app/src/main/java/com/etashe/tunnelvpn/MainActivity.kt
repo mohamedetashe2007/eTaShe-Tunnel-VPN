@@ -48,10 +48,14 @@ class MainActivity : AppCompatActivity() {
         tvUsage = findViewById(R.id.tvUsage)
         val btnConnect = findViewById<FrameLayout>(R.id.btnConnect)
         val btnSettings = findViewById<android.widget.ImageButton>(R.id.btnSettings)
+        val btnImport = findViewById<android.widget.ImageButton>(R.id.btnImport)
 
         btnConnect.setOnClickListener { toggleConnection() }
         btnSettings.setOnClickListener {
             Toast.makeText(this, "الإعدادات قريباً", Toast.LENGTH_SHORT).show()
+        }
+        btnImport.setOnClickListener {
+            startActivity(Intent(this, ImportActivity::class.java))
         }
 
         maybeShowTelegramDialog()

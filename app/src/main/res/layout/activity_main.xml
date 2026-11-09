@@ -14,9 +14,20 @@
         android:text="IP: —"
         android:textColor="@color/text_white"
         android:textSize="14sp"
-        app:layout_constraintEnd_toStartOf="@id/btnSettings"
+        app:layout_constraintEnd_toStartOf="@id/btnImport"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnImport"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@null"
+        android:src="@android:drawable/ic_input_add"
+        app:layout_constraintEnd_toStartOf="@id/btnSettings"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/red_primary" />
 
     <ImageButton
         android:id="@+id/btnSettings"
