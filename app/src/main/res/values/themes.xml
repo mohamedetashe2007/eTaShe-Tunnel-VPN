@@ -14,4 +14,24 @@
     <style name="Theme.EtasheTunnel.Splash" parent="Theme.EtasheTunnel">
         <item name="android:windowBackground">@drawable/bg_splash</item>
     </style>
+
+    <style name="ThemeOverlay.EtasheTunnel.Dialog" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="colorPrimary">@color/text_white</item>
+        <item name="colorOnSurface">@color/text_white</item>
+        <item name="android:windowBackground">@drawable/bg_dialog</item>
+        <item name="android:textColorPrimary">@color/text_white</item>
+        <item name="android:textColorSecondary">@color/text_white</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.EtasheTunnel.Dialog.Button.Positive</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.EtasheTunnel.Dialog.Button.Negative</item>
+    </style>
+
+    <style name="Widget.EtasheTunnel.Dialog.Button.Positive" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/red_primary</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.EtasheTunnel.Dialog.Button.Negative" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/text_white</item>
+    </style>
 </resources>

@@ -76,7 +76,7 @@ class MainActivity : AppCompatActivity() {
         val prefs = getSharedPreferences(PREFS, MODE_PRIVATE)
         if (prefs.getBoolean(KEY_TELEGRAM_SHOWN, false)) return
 
-        AlertDialog.Builder(this)
+        AlertDialog.Builder(this, R.style.ThemeOverlay_EtasheTunnel_Dialog)
             .setTitle(R.string.telegram_dialog_title)
             .setMessage(R.string.telegram_dialog_message)
             .setCancelable(false)
