@@ -25,4 +25,8 @@
     <string name="import_success">تم إضافة: %1$s</string>
     <string name="import_deleted">تم الحذف</string>
     <string name="import_generic_error">تعذر تحليل الرابط، تأكد إنه صحيح</string>
+
+    <string name="vpn_notification_channel">eTaShe Tunnel VPN</string>
+    <string name="vpn_notification_title">eTaShe Tunnel VPN متصل</string>
+    <string name="vpn_notification_text">النفق شغال في الخلفية</string>
 </resources>

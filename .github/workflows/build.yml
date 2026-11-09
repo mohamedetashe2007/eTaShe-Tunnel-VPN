@@ -21,6 +21,33 @@ jobs:
           distribution: temurin
           java-version: '17'
 
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: 'stable'
+
+      - name: Install Android NDK
+        id: ndk
+        run: |
+          NDK_VERSION="27.0.12077973"
+          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --install "ndk;$NDK_VERSION" > /dev/null
+          echo "ndk-path=$ANDROID_HOME/ndk/$NDK_VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Build Xray-core engine (libv2ray.aar via gomobile)
+        env:
+          ANDROID_NDK_HOME: ${{ steps.ndk.outputs.ndk-path }}
+        run: |
+          go install golang.org/x/mobile/cmd/gomobile@latest
+          go install golang.org/x/mobile/cmd/gobind@latest
+          export PATH="$(go env GOPATH)/bin:$PATH"
+          git clone --depth 1 https://github.com/2dust/AndroidLibXrayLite.git /tmp/AndroidLibXrayLite
+          cd /tmp/AndroidLibXrayLite
+          gomobile init
+          go mod tidy -v
+          gomobile bind -v -androidapi 24 -trimpath -ldflags='-s -w -buildid=' -o libv2ray.aar ./
+          mkdir -p "$GITHUB_WORKSPACE/app/libs"
+          cp libv2ray.aar "$GITHUB_WORKSPACE/app/libs/libv2ray.aar"
+
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 

@@ -35,6 +35,14 @@ android {
 }
 
 dependencies {
+    // Real Xray-core engine (VLESS/VMess/Trojan/Shadowsocks). Built fresh from
+    // github.com/2dust/AndroidLibXrayLite source by the CI workflow (gomobile bind)
+    // and dropped here as app/libs/libv2ray.aar before this build runs — it is not
+    // committed to the repo. A local `./gradlew` run outside CI will not have this
+    // file and Kotlin compilation of the core.xray package will fail; that is expected,
+    // this project is only ever built through GitHub Actions.
+    implementation(files("libs/libv2ray.aar"))
+
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.12.0")
