@@ -9,7 +9,15 @@ android {
 
     defaultConfig {
         applicationId = "com.etashe.tunnelvpn"
-        minSdk = 21
+        // The real Xray-core engine (app/libs/libv2ray.aar, built by CI from
+        // github.com/2dust/AndroidLibXrayLite with `gomobile bind -androidapi 24`)
+        // declares minSdk 24 in its own manifest, and the manifest merger fails the
+        // build if our minSdk is lower ("the library might be using APIs not
+        // available" below 24). v2rayNG and every other Xray-core-based VPN app
+        // carry the same floor for the same reason, so this isn't a choice we can
+        // avoid while shipping the real engine — Android 7.0 (API 24) covers the
+        // overwhelming majority of active devices.
+        minSdk = 24
         targetSdk = 34
         versionCode = 1
         versionName = "1.0.0"
